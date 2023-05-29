@@ -27,4 +27,17 @@ var data = []
         section3.querySelector('#winner-name').textContent = data[winnerIndex].name;
         section3.querySelector('#winner-mobile').textContent = data[winnerIndex].mobile.substring(data[winnerIndex].mobile.length - 3);
         section3.querySelector('#winner-city').textContent = data[winnerIndex].city;
+
+
+        async function loadParticles(options) {
+            await loadFireworksPreset(tsParticles);
+            
+            await tsParticles.load(options);
+          }
+          
+          const configs = { preset: "fireworks" };
+          
+          loadParticles(configs);
+
+
     }
